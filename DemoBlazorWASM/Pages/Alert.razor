@@ -1,0 +1,16 @@
+﻿@page "/alert"
+
+<Counter />
+<Counter2 CurrentCount="4" />
+
+<hr />
+<MatTextField Label="Type hier een tekst" @bind-Value="@text" />
+<MatButton Raised="true" OnClick="DoAlert">ALERT!</MatButton>
+<hr />
+@text
+<hr />
+<input @bind="@text2" @bind:event="oninput" @oninput:preventDefault />
+@text2
+<hr />
+<MatTextField Label="hier komt de prompt tekst" Disabled="true" @bind-Value="@returntekst" />
+<MatButton Raised="true" OnClick="DoPrompt">PROMPT</MatButton>
