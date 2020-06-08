@@ -29,5 +29,12 @@ namespace DemoBlazorWASM.Pages
             returntekst = await JSRuntime.InvokeAsync<string>("doPrompt");
             //returntekst = Age.Result;
         }
+
+        [JSInvokable]
+        public static void DoTheAlert()
+        {
+            var text = "Invokable worked";
+            //await JSRuntime.InvokeVoidAsync("doAlert", text);
+        }
     }
 }
